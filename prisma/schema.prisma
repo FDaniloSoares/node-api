@@ -14,9 +14,9 @@ datasource db {
 }
 
 model tb_product {
-  id_product        Int      @id @default(autoincrement())
+  id               Int      @id @default(autoincrement()) @map("id_product")
   name             String   @db.VarChar(255)
   price            Decimal  @db.Decimal(10, 2)
-  image_uri        String   @db.VarChar(255)
-  description      String?   @db.Text
+  imageUri         String   @db.VarChar(255) @map("image_uri")
+  description      String?  @db.Text
 }
